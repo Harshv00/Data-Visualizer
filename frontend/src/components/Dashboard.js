@@ -9,6 +9,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import { useEffect, useState } from "react";
 
 ChartJS.register(
   CategoryScale,
@@ -23,6 +24,10 @@ ChartJS.register(
 const Dashboard = () => {
 
   const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+  const [productData, setProductData] = useState(null);
+  const [productLoading, setProductLoading] = useState(false);
+  const [orderData, setOrderData] = useState(null);
+  const [orderLoading, setOrderLoading] = useState(false);
 
   const data = {
     labels,
@@ -40,9 +45,62 @@ const Dashboard = () => {
     ],
   };
 
-  return <div>
-    <Bar  data={data} />;
-  </div>;
+  //for product details
+  const loadProductData = () => {
+    setProductLoading(true);
+    fetch("http://localhost:5000/product/getall").then((res) => {
+      if (res.status === 200) {
+        res.json().then(data => {
+          console.log(data);
+          setProductLoading(false);
+          setProductData(data);
+        })
+      }
+    });
+  }
+  useEffect(() => {
+    loadProductData();
+  }, [])
+
+  //for order details
+  const loadOrderData = () => {
+    setProductLoading(true);
+    fetch("http://localhost:5000/product/getall").then((res) => {
+      if (res.status === 200) {
+        res.json().then(data => {
+          console.log(data);
+          setOrderLoading(false);
+          setOrderData(data);
+        })
+      }
+    });
+  }
+  useEffect(() => {
+    loadOrderData();
+  }, [])
+
+  const displayProductChart = () => {
+    if (!productLoading) {
+      <Bar data={{
+
+      }} />
+    }
+  }
+
+  const displayOrderChart = () => {
+    if (!orderLoading) {
+      <Bar data={{
+
+      }} />
+    }
+  }
+
+  return (
+    <div>
+        <Bar data={data} />;
+      </div>
+   
+  )
 };
 
 export default Dashboard;

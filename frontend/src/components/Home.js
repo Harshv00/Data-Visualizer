@@ -1,89 +1,48 @@
-// 1. Components are JavaScript Functions.
-// 2. Function name should start with uppercase letter.
-// 3. Function should contain a top-level return statement.
-// 4. Function should exported in order to add in App.js
-
-import React from "react";
-import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardHeader,
-} from "@mui/material";
+import React from 'react'
+import "./Home.css";
 
 const Home = () => {
-  const creator = "META";
-  const item = <li>Apple</li>;
-  const loginStatus = false;
-  const subscribed = true;
-
-  const showCard = (title) => {
-    return (
-      <div className="card mt-5">
-        <div className="card-header">{title}</div>
-        <div className="card-body">
-          <h3>Card Body</h3>
-        </div>
-      </div>
-    );
-  };
-
   return (
-    <div style={{ background: "#eee" }}>
-      <h1 style={{ backgroundColor: "yellow", color: "red" }}>
-        Home component
-      </h1>
-
-      <div className="container mt-5">
-        <h2>React was created by {creator}</h2>
-        {showCard("First Card")}
-        {showCard("Second Card")}
-        <button className="btn btn-primary">
-          {loginStatus ? "Logout" : "Login Now"}
-        </button>
-
-        <button disabled={subscribed} style={styles.subsBtn} className="btn">
-          {subscribed ? "Subscribed" : "Subscribe"}&nbsp;
-          <i className="fa fa-user-circle" aria-hidden="true"></i>
-        </button>
-
-        {item}
-        {item}
-        {item}
-        {item}
+    <div>
+      <header class="showcase">
+      <h1>DATA VISUALIZATION</h1>
+      <p>
+      The best tools for data analysis, visualization,</p>
+      <p>and integration are those that are versatile,</p>
+      <p>easy to use, and able to link to other data sources.</p>
+      <p>Use these tools to gain insights and understanding from your data.
+      </p>
+      </header>
+      <section class="home-cards">
+      <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2fhdqjJuA3u7EI2ASaxURR8ngRkfY-2PsUg&usqp=CAU" alt=""></img>
+        <h3>BAR CHARTS</h3>
+        <p>
+        A Bar Charts is a graphical display of data using bars of different heights.
+        </p>
+     </div>
+      <div>
+        <img src="https://grafana.com/static/img/docs/pie-chart-panel/pie-type-chart-7-5.png" alt="" />
+        <h3>PIE CHARTS</h3>
+        <p>
+        A pie chart is a type of graph that represents the data in the circular graph.
+        </p>
       </div>
-
-      <div className="container mt-5">
-        <Button>MUI Button 1</Button>
-        <Button variant="contained" color="primary">
-          MUI Button 2
-        </Button>
-        <Button variant="outlined" color="warning">
-          MUI Button 3
-        </Button>
-
-        <Card className="mt-5">
-          <CardHeader title="Card Header" />
-          <CardContent>
-            <h2>Material UI Card</h2>
-          </CardContent>
-          <CardActions>
-            <Button color="error" variant="contained">
-              Learn More
-            </Button>
-          </CardActions>
-        </Card>
+      <div>
+        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQZJ2ZCKriLDWCMDhOOuJBX_Nhp7aVJD-HnQ&usqp=CAU" alt="" />
+        <h3>LINE CHARTS</h3>
+        <p>
+        A line chart is a graphical representation of an asset's historical price action that connects a series of data points with a continuous line.
+        </p>
       </div>
+    </section>
+    <section class="xbox">
+      <div class="content">
+      </div>
+    </section>
+    
     </div>
-  );
-};
+  )
+}
 
-const styles = {
-  subsBtn: {
-    backgroundColor: "red",
-    color: "white",
-  },
-};
-
-export default Home;
+export default Home

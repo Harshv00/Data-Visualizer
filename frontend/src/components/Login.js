@@ -1,44 +1,48 @@
 import { TextField, Button } from "@mui/material";
 import { Formik } from "formik";
 import React from "react";
-import * as Yup from 'yup';
+import * as Yup from "yup";
+import "./Login.css";
 
 const Login = () => {
-  const handleFormSubmit = () => {
-    console.log("Form Sublitted!!");
+  const handleFormSubmit = (formdata) => {
+    console.log("Form Submitted!!");
+    console.log(formdata);
   };
-  const loginSchema = Yup.object().shape({
-    email: Yup.string().email('Invalid email').required('Required'),
-    password: Yup.string().min('Password should be longer than 4 characters').required('Required'),
+  const SignupSchema = Yup.object().shape({
+    email: Yup.string().email("Invalid email").required("Required"),
+    password: Yup.string()
+      .min(4, "Password should be longer than 4 characters")
+      .required("Required"),
   });
+
   return (
-    <div style={{ background: "#eee", height: "100vh" }}>
+    <div style={{height: "100vh" }}>
       <div className="row h-100 justify-content-center align-items-center">
         <div className="col-md-3">
-          <div className="card">
+          <div class="card-login">
             <div className="card-body">
-              <h3 className="text-muted text-center">Login Form</h3>
+              <h3 className="text-muted text-center">LOGIN HERE</h3>
               <hr />
-
+              
               <Formik
-                initialValues={{ email: "", password: "" }} //specifying initial value for form
+                initialValues={{ email: "", password: "" }} // specifying initial value form form
                 onSubmit={handleFormSubmit} // function to handle form submission
-                validationSchema={loginSchema}
+                validationSchema={SignupSchema}
               >
                 {({ values, handleChange, handleSubmit, errors, touched }) => (
                   <form onSubmit={handleSubmit}>
                     <TextField
-                      sx={{ mt: 3 }} 
+                      sx={{ mt: 3 }}
                       fullWidth
                       label="Email"
                       placeholder="Email Address"
                       id="email"
                       value={values.email}
                       onChange={handleChange}
-                      error= {Boolean(errors.email) && touched.email}
-                      helperText={errors.email ? errors.email : ""}
+                      error={Boolean(errors.email) && touched.email}
+                      helperText={errors.email}
                     />
-
                     <TextField
                       sx={{ mt: 3 }}
                       fullWidth
@@ -48,10 +52,9 @@ const Login = () => {
                       id="password"
                       value={values.password}
                       onChange={handleChange}
-                      error= {Boolean(errors.password) && touched.password}
-                      helperText={errors.password ? errors.password : ""}
+                      error={Boolean(errors.password) && touched.password}
+                      helperText={errors.password}
                     />
-
                     <Button
                       type="submit"
                       fullWidth
@@ -65,10 +68,12 @@ const Login = () => {
               </Formik>
             </div>
           </div>
-        </div>
       </div>
     </div>
+    </div>
+    
+    
   );
-};
+}
 
 export default Login;

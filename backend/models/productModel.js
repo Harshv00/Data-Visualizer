@@ -5,7 +5,7 @@ const myschema = new Schema({
     category : String,
     quantity : Number,
     price : Number,
-    createdat : Date, 
+    createdAt : Date, 
 });
 
-module.exports = model('product', myschema);
+module.exports = model('Product', myschema);

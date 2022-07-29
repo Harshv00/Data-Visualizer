@@ -6,4 +6,4 @@ const myschema = new Schema({
     email : String,
 });
 
-module.exports = model('order', myschema);
+module.exports = model('User', myschema);

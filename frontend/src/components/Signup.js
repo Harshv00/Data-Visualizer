@@ -24,22 +24,22 @@ const Signup = () => {
     // 3. data
     // 4. data format
 
-    // fetch("http://localhost:5000/user/add", {
-    //   method: "POST",
-    //   body: JSON.stringify(formdata), //convert javascript to json
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    // }).then((res) => {
-    //   if (res.status === 200) {
-    //     console.log("data saved");
-    //     Swal.fire({
-    //       icon: "success",
-    //       title: "Success",
-    //       text: "Registered Successfully!!👍",
-    //     });
-    //   }
-    // });
+    fetch("http://localhost:5000/user/add", {
+      method: "POST",
+      body: JSON.stringify(formdata), //convert javascript to json
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((res) => {
+      if (res.status === 200) {
+        console.log("data saved");
+        Swal.fire({
+          icon: "success",
+          title: "Success",
+          text: "Registered Successfully!!👍",
+        });
+      }
+    });
   };
 
   //   3. use Formik component
