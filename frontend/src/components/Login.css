@@ -10,14 +10,14 @@
     --card-width: calc(var(--card-height) / 1.5);
   }
   
-   body {   
+   /* body {   
     background-image: linear-gradient(to right, #00444394, rgba(0, 0, 0, 0.699)),
     url(https://miro.medium.com/max/1400/1*g__jiesLRIfCRefVG69Pfw.gif);
     box-sizing: border-box;
     background-position: center; 
     background-repeat: no-repeat;
     background-size: cover;
-  }
+  } */
   
   .card-login {
     background: #d0dde0da;
