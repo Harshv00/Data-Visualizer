@@ -4,6 +4,7 @@ import { Formik } from "formik";
 import Swal from "sweetalert2";
 import * as Yup from 'yup';
 
+
 const Signup = () => {
   // 1. Create a form object which should match with model fields
   const userForm = {
@@ -57,10 +58,13 @@ const Signup = () => {
   });
 
   return (
-    <div className="container">
-      <h1>Signup Here</h1>
-      <hr className="mb-5" />
-
+    <div className="row h-100 justify-content-center align-items-center">
+    <div className="col-md-5">
+      <div class="card">
+        <div className="card-body">
+          <h1>SIGN UP</h1>
+          <hr className="mb-5" />
+      
       <Formik initialValues={userForm} onSubmit={userSubmit} validationSchema={formSchema} >
         {({ handleSubmit, handleChange, values, errors, touched }) => (
           <form onSubmit={handleSubmit}>
@@ -102,6 +106,9 @@ const Signup = () => {
           </form>
         )}
       </Formik>
+    </div>
+    </div>
+    </div>
     </div>
   );
 };

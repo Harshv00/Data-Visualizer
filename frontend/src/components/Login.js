@@ -23,7 +23,7 @@ const Login = () => {
           <div class="card-login">
             <div className="card-body">
               <h3 className="text-muted text-center">LOGIN HERE</h3>
-              <hr />
+              
               
               <Formik
                 initialValues={{ email: "", password: "" }} // specifying initial value form form
