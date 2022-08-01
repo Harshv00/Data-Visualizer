@@ -17,12 +17,12 @@ const Login = () => {
   });
 
   return (
-    <div style={{height: "100vh" }}>
+     <div style={{backgroundImage: `URL("https://miro.medium.com/max/1400/1*g__jiesLRIfCRefVG69Pfw.gif")`, height: "100vh" }}>
       <div className="row h-100 justify-content-center align-items-center">
         <div className="col-md-3">
           <div class="card-login">
             <div className="card-body">
-              <h3 className="text-muted text-center">LOGIN HERE</h3>
+              <h3 className="text-muted text-center" style={{textColor: 'black'}}>LOGIN HERE</h3>
               
               
               <Formik
@@ -32,7 +32,7 @@ const Login = () => {
               >
                 {({ values, handleChange, handleSubmit, errors, touched }) => (
                   <form onSubmit={handleSubmit}>
-                    <TextField
+                    <TextField 
                       sx={{ mt: 3 }}
                       fullWidth
                       label="Email"
@@ -71,7 +71,6 @@ const Login = () => {
       </div>
     </div>
     </div>
-    
     
   );
 }
