@@ -11,22 +11,23 @@
   }
   
   .card-login {
-    background: #ffffff;
+    background: #303aa8;
     width: var(--card-width);
     height: var(--card-height);
     padding: 3px;
     position: relative;
-    border-radius: 6px;
+    border-radius: 10px;
+    border: 7px solid rgb(89, 89, 156);
     justify-content: center;
     align-items: center;
     text-align: center;
     display: flex;
     font-size: 1.5em;
-    color: rgb(88 199 250 / 0%);
+    color: rgb(255, 255, 255);
     cursor: pointer;
     font-family: 'Times New Roman', Times, serif;
   }
-
+  
   
 
   

@@ -84,7 +84,7 @@ const Home = () => {
       </section>
       <div className="text-center p-3">
         © 2020 Copyright:
-        <a class="text-dark">DataVisualizer.com</a>
+        <a class="text">DataVisualizer.com</a>
       </div>
            
   </div>

@@ -22,7 +22,7 @@ const Login = () => {
         <div className="col-md-3">
           <div class="card-login">
             <div className="card-body">
-              <h3 className="text-muted text-center" style={{textColor: 'black'}}>LOGIN HERE</h3>
+              <h3 className="text-muted text-center">LOGIN HERE</h3>
               
               
               <Formik

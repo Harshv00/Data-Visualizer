@@ -3,6 +3,7 @@ import React from "react";
 import { Formik } from "formik";
 import Swal from "sweetalert2";
 import * as Yup from 'yup';
+import "./Signup.css";
 
 
 const Signup = () => {
@@ -58,12 +59,13 @@ const Signup = () => {
   });
 
   return (
-    <div className="row h-100 justify-content-center align-items-center">
-    <div className="col-md-5">
-      <div class="card">
-        <div className="card-body">
-          <h1>SIGN UP</h1>
-          <hr className="mb-5" />
+    <div class="form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                    <h3 style={{textAlign: "center"}}>SIGN UP</h3>
+                    <hr></hr>
       
       <Formik initialValues={userForm} onSubmit={userSubmit} validationSchema={formSchema} >
         {({ handleSubmit, handleChange, values, errors, touched }) => (
@@ -99,13 +101,15 @@ const Signup = () => {
               helperText={touched.password ? errors.password : ''}
               error={Boolean(errors.password && touched.password)}
             />
+            
 
-            <Button type="submit" variant="contained">
-              Submit
-            </Button>
+            <div class="form-button mt-3" style={{textAlign: "center"}}>
+            <button id="submit" type="submit" class="btn btn-primary">SUBMIT</button>
+            </div>
           </form>
         )}
       </Formik>
+    </div>
     </div>
     </div>
     </div>

@@ -1,14 +1,13 @@
 import { Switch } from "@mui/material";
 import React, {} from "react";
 import { NavLink } from "react-router-dom";
-
 const Header = () => {
 
   
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
+        <div className="container-fluid" style={{backgroundColor: "white"}}>
           <button
             className="navbar-toggler"
             type="button"
@@ -25,7 +24,7 @@ const Header = () => {
             <a className="navbar-brand mt-2 mt-lg-0" href="#">
               <h4>DATA VISUALIZER</h4>
             </a>
-
+          </div>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <NavLink className="nav-link" to="/homepage">
@@ -60,9 +59,8 @@ const Header = () => {
                 </li>
               </ul>
             </div>
+            </nav>
           </div>
-        </nav>
-    </div>
   );
 };
 

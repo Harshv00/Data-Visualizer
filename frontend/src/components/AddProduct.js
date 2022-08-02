@@ -36,13 +36,13 @@ const AddProduct = () => {
   //   3. use Formik component
 
   return (
-    <div style={{ backgroundImage: `url("https://i.pcmag.com/imagery/articles/02Xkt5sp3fVl5rGUtk3DXMi-7.fit_lim.v1569485349.jpg")`, 
+    <div style={{ backgroundColor: "#2e3153", 
     height: "100vh" }}>
       <div className="row h-100 justify-content-center align-items-center">
         <div className="col-md-5">
-          <div class="card">
+          <div class="card" style={{backgroundImage: `url("https://img.freepik.com/premium-vector/abstract-background-business-card-poster-brochure-web-vector-illustration_41981-1704.jpg?w=2000")`}}>
             <div className="card-body">
-              <h1>Enter Product Details</h1>
+              <h1 style={{textAlign: "center"}}>Enter Product Details</h1>
               <hr className="mb-5" />
               <Formik initialValues={userForm} onSubmit={userSubmit}>
                 {({ handleSubmit, handleChange, values, errors, touched }) => (
@@ -111,6 +111,7 @@ const AddProduct = () => {
     </div>
   );
 };
+
 
 // formik
 

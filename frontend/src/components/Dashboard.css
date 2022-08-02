@@ -1,0 +1,106 @@
+@import 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet';
+.body-dash {
+	font-family: 'Inter', sans-serif;
+	background-color:#252636;
+	font-size: .925rem;
+}
+.welcome {
+	color: white ;
+}
+
+.welcome .content {
+	background-color : #2e3153;
+}
+
+.welcome .box {
+	color: var(--dk-gray-400);
+}
+.statistics {
+    color: white;
+  }
+  
+  .statistics .box {
+    background-color:  #2e3153;
+  }
+  
+  .statistics .box i {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+  
+  .statistics .box p {
+    color: #e2e3eb;
+  }
+  
+
+.charts .chart-container {
+	background-color: #2e3153;
+}
+
+.charts .chart-container h3 {
+	color: white
+}
+.admins .box .admin {
+    background-color: #2e3153;
+  }
+  
+  .admins .box h3 {
+    color: white;
+  }
+  
+  .admins .box p {
+    color: white;
+  }
+  .statis {
+    color: white;
+  }
+  
+  .statis .box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  
+  .statis .box h3:after {
+    content: "";
+    height: 2px;
+    width: 70%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.12);
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .statis .box i {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    font-size: 22px;
+    padding: 15px;
+    top: -25px;
+    left: -25px;
+    background-color: rgba(255, 255, 255, 0.15);
+    line-height: 60px;
+    text-align: right;
+    border-radius: 50%;
+  }
+  
+  .main-color {
+    color: #ffc107;
+  }
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 5px;
+    height: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #3c3f58;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
