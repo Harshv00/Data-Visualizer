@@ -10,8 +10,6 @@ const Home = () => {
       The best tools for data analysis, visualization,</p>
       <p>and integration are those that are versatile,</p>
       <p>easy to use, and able to link to other data sources.</p>
-      <p>Use these tools to gain insights and understanding from your data.
-      </p>
       </header>
       <section class="home-cards">
       <div>
@@ -28,6 +26,14 @@ const Home = () => {
         A pie chart is a type of graph that represents the data in the circular graph.
         </p>
       </div>
+      <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgrKw29o3K8nWT2VSGogAZ7DKPlkKc7eN72A&usqp=CAU" alt="" />
+        <h3>PYRAMID CHARTS</h3>
+        <p>
+        A pyramid chart (also called a triangle diagram or a triangle chart) appears in the shape of a triangle divided into horizontal sections and is used to represent hierarchies.
+        </p>
+      </div>      
+      
       <div>
         <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQZJ2ZCKriLDWCMDhOOuJBX_Nhp7aVJD-HnQ&usqp=CAU" alt="" />
         <h3>LINE CHARTS</h3>
