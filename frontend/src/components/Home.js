@@ -1,3 +1,4 @@
+import { Input } from '@mui/material';
 import React from 'react'
 import "./Home.css";
 
@@ -5,7 +6,7 @@ const Home = () => {
   return (
     <div>
       <header class="showcase">
-      <h1>DATA VISUALIZATION</h1>
+      <h1 style={{fontSize: "5rem"}}>DATA VISUALIZER</h1>
       <p>
       The best tools for data analysis, visualization,</p>
       <p>and integration are those that are versatile,</p>
@@ -47,6 +48,31 @@ const Home = () => {
       </div>
     </section>
     <hr className="m-0" />
+    <div class="container">  
+  <form id="contact" action="" method="post">
+    <h3>Contact Us</h3>
+    <h4>Contact us today, and get reply with in 24 hours!</h4>
+    <fieldset>
+      <input placeholder="Your name" type="text" tabindex="1" required autofocus></input>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address" type="email" tabindex="2" required></input>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Phone Number" type="tel" tabindex="3" required></input>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Web Site starts with http://" type="url" tabindex="4" required></input>
+    </fieldset>
+    <fieldset>
+      <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+  </form>
+  
+</div>
     <section>
     <div className="text-center py-4 align-items-center">
         <p>Follow DATA VISUALIZER on social media</p>
